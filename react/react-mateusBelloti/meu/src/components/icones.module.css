@@ -1,0 +1,11 @@
+ul{
+    list-style: none;
+    color: red;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    padding: 30px;
+}

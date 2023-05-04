@@ -1,0 +1,24 @@
+/*
+    * Aqui é o css Individual onde pode alterar um por um
+    * 
+*/
+
+.testeUm{
+    background-color: aqua;
+    padding: 10px;
+}
+
+.testeDois{
+    background-color: rgba(56, 1, 1, 0.26);
+    color: rgb(2, 12, 2);
+
+}
+
+.testeTres{
+    background-color: coral;
+}
+
+/*
+    * No jsx sempre usar o className={} como class para poder conectar
+    * Exportar no app.js é opcional
+*/

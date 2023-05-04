@@ -1,0 +1,12 @@
+/*
+  * Essa opçao é o css global
+*/
+
+body{
+  margin: auto;
+}
+
+p{
+  color: black;
+  font-weight: bolder;
+}
