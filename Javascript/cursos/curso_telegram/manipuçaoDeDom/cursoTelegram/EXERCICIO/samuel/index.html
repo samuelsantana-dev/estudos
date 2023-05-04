@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <form id="form">
+        <p>
+            <label for="">Tipo:</label>
+            <input type="text" placeholder="Casa ou apartamento" id="tipo">
+        </p>
+
+        <p>
+            <label for="">Area:</label>
+            <input type="text" placeholder="Local" id="area">
+        </p>
+
+        <div>
+           <select name="select" id="select" onchange="selection()">
+            <option value="selecione">Selecione</option>
+                <option value="disponivel">Disponivel</option>
+                <option value="alugado">Alugado</option>
+           </select>
+
+           <button type="submit" id="botao" >
+                Adicionar
+           </button>
+        </div>
+    </form>
+
+    <div id="lista">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

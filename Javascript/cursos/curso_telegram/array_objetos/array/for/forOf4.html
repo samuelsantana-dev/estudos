@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae nesciunt facere aliquam veritatis iste cumque voluptates nihil molestias doloremque blanditiis, quibusdam consectetur! Vel, laboriosam dignissimos? Inventore, sapiente. Dignissimos, ipsum?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatum qui assumenda deserunt, nobis est. Et, ex quis expedita excepturi quasi maiores reprehenderit neque, nulla repudiandae ipsa magni animi id!
+        </p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id voluptatum accusantium vero dolorum aliquam alias quos illum cupiditate, hic doloribus similique vitae fugit animi suscipit ex ratione nesciunt nulla aperiam.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse fugiat magnam provident aliquid voluptatem optio libero eligendi? Quam sapiente animi dignissimos laboriosam molestiae sequi, libero ipsum vero ea delectus? Accusamus?
+        </p>
+    </section>
+
+    <button onclick="marcar()">Marcar todos </button>
+    <button onclick="marcar(false)">Remover todos</button>
+
+    <script>
+        const marcar = (lido = true) => {
+            const paragrafos = document.querySelectorAll('section p')
+            for(item of paragrafos) {   (lido) ? 
+                item.classList.add('read') : 
+                item.classList.remove('read')
+            }
+        }
+    </script>
+</body>
+</html>

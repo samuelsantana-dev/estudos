@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estilos</title>
+    <style>
+        p.blue-color {
+            /*Aqui foi adicionada uma classe direta pelo css, essa aqui ela foi adicionada pelo javascript */
+            color: blue;
+
+            /*Algumas classes ja sao adicionadas direto no css assim como nesse exercicio porque ai deu pra alterar para a cor azul*/
+        }
+    </style>
+</head>
+<body>
+
+    <button type="button" onclick="fundoTransparente()">Fundo Transparente</button>
+
+    <button type="button" onclick="fundoVermelha()">Fundo Vermelha</button>
+
+    <button type="button" onclick="corAzul()">Cor Azul</button>
+
+    <button type="button" onclick="removerCor()">Remover Cor</button>
+
+    <br>
+
+    <p id="estiloP">
+        Manipulando o Css via Dom 
+    </p>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <!--
+        para o html nao tem nada haver com os comandos la em baixo as variaveis do javascript se usa para localizar os que estao no html e fazer os comandos com as variaveis ou seja o html nao tem nada haver com fazer os comandos do javascript,ele é apenas localizado
+    -->
+    <h1>Radar</h1>
+Velocidade do carro está em<input type="number" name="txtvel" id="txtvel"> km/h 
+<input type="button" value="verificar" onclick="calcular ()">
+<div id="res">
+    res
+</div>
+<script>
+    function calcular () {
+        var txtvel = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(txtvel.value) // o var vel é a chave pra acontecer porque o calculo que acontece vem a partir dele perceba que sempre se usa o vel para fazer o calculo dos numeros colocados no number de velocidade de html
+        res.innerHTML = `<p>Sua velocidade atual é de ${vel} km/h</p>`
+        if( vel > 60) {
+            res.innerHTML += `<p> voce foi multado por excesso de velocidade`
+        } 
+        res.innerHTML += '<p>use sempre o cinto de segurança </p>'
+    }
+  // O += é um concatenaçao ou seja junta os 2 ou seja aparece os 2 comandos 
+  // se cria as variaveis para fazer os comandos com elas,as variaveis localizam as que estao no html
+
+</script>
+
+
+
+</body>
+</html>
