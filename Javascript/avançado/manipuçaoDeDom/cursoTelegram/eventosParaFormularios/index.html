@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos para formularios</title>
+</head>
+<body>
+
+    <form onsubmit="salvar()">
+        <p>
+            <label >Nome:</label>
+            <input type="text" name="name">
+        </p>
+
+        <p>
+            <label>Prorama em:</label>
+
+            <select name="programa" id="">
+                <option value="Javascript">Javascript</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Pyton">Pyton</option>
+                <option value="Php">Php</option>
+            </select>
+        </p>
+            <button type="submit">Salvar</button>
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

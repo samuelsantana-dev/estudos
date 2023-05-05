@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores para Formularios</title>
+</head>
+<body>
+
+    <p>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Digite o seu nome">
+    </p>    
+
+    <div>
+        Cor primaria:
+        <select id="selecionar">
+            <option value="" name="cor">Amarelo</option>
+            <option value="" name="cor">Vermelho</option>
+            <option value="" name="cor">Azul</option>
+            <option value="" name="cor">Verde</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div id="programar">
+        <p>gosta de programar:</p>
+        <input type="checkbox" id="sim" name="check" value="sim"> sim
+        <input type="checkbox" name="check" id="nao" value="nao"> não
+    </div>
+
+    <div id="res">
+        <label for="">Conhecimentos em programação web</label>
+        <br> <br>
+        <input type="checkbox" value="HTML" name="option">HTML
+        <input type="checkbox" value="Javascript" name="option">Javascript
+        <input type="checkbox" value="Css" name="option">Css
+        <input type="checkbox" value="express" name="option">Express
+        <input type="checkbox" value="React" name="option">React
+    </div>
+    
+    <button id="botao" onclick="botao()">Mostrar informações </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
