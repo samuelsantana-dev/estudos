@@ -18,9 +18,8 @@ function App() {
 
           <main>
             
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium repellendus commodi voluptatum! Distinctio corporis illo nisi ipsam commodi cupiditate ut in vitae, eius qui cumque exercitationem expedita suscipit corrupti beatae.
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium repellendus commodi voluptatum! Distinctio ASsascorporis illo nisi ipsam commodi cupiditate ut in vitae, eius qui cumque exercitationem expedita suscipit corrupti beatae.
             </p>
-            
             <p> 
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem unde praesentium iste, assumenda placeat. Debitis, dolores ipsa minima nostrum magni harum nam facilis eaque blanditiis nemo ipsum id saepe?
             </p>
