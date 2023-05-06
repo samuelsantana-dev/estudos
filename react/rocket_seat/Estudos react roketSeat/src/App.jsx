@@ -1,5 +1,6 @@
 import { Header } from './componentes/Header'
-import { Side_bar } from './componentes/side_bar'
+import { Side_bar } from './componentes/Side_bar'
+import { Post } from './componentes/post'
 
 //Estilos
 import Style from'./App.module.css'
@@ -17,12 +18,9 @@ function App() {
           </asside>
 
           <main>
-            
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium repellendus commodi voluptatum! Distinctio ASsascorporis illo nisi ipsam commodi cupiditate ut in vitae, eius qui cumque exercitationem expedita suscipit corrupti beatae.
-            </p>
-            <p> 
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis exercitationem unde praesentium iste, assumenda placeat. Debitis, dolores ipsa minima nostrum magni harum nam facilis eaque blanditiis nemo ipsum id saepe?
-            </p>
+            <Post />
+            <Post />
+            <Post />
            
           </main>
       </div>
