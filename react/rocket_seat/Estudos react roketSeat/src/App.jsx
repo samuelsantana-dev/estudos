@@ -2,6 +2,7 @@ import { Header } from './componentes/Header'
 import { Side_bar } from './componentes/Side_bar'
 import { Post } from './componentes/post'
 
+
 //Estilos
 import Style from'./App.module.css'
 import './global.css'
@@ -21,8 +22,11 @@ function App() {
             <Post />
             <Post />
             <Post />
-           
+        
           </main>
+
+       
+     
       </div>
     </div>
   )
