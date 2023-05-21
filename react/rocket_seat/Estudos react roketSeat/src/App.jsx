@@ -23,7 +23,10 @@ const post = [
         content: [
         { type: 'paragraph', content: 'Fala galeraa 👋'},
         {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-        {type: 'link', content: 'jane.design/doctorcare'},
+        {type: 'link', content: ' 👉 jane.design/doctorcare'},
+        {type: 'link', content: '#novoprojeto'},
+        {type: 'link', content: ' #nlw'},
+        {type: 'link', content: '#rocketseat'}
         ],
         publishedAt: new Date('01/05/2023 20:00')
    },
@@ -39,7 +42,10 @@ const post = [
     content: [
       { type: 'paragraph', content: 'Fala galeraa 👋'},
       {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      {type: 'link', content: 'jane.design/doctorcare'},
+      {type: 'link', content: ' 👉 jane.design/doctorcare'},
+      {type: 'link', content: '#novoprojeto'},
+      {type: 'link', content: ' #nlw'},
+      {type: 'link', content: '#rocketseat'}
       ],
       publishedAt: new Date('16/05/2023 22:00')
  }

@@ -1,7 +1,7 @@
 import { Avatar } from './avatar'
 import Style from './comment.module.css'
 
-export function Comment(){
+export function Comment({content}){
     return(
         <div className={Style.comment}>
             <Avatar src='https://github.com/professorguanabara.png' />
@@ -18,7 +18,7 @@ export function Comment(){
                             Deletar
                         </button>
                     </header>
-                    <p>Muito bom parabens</p>
+                    <p>{content}</p>
 
                 </div>
                 <footer>
