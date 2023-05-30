@@ -1,7 +1,14 @@
 import { Avatar } from './avatar'
 import Style from './comment.module.css'
 
-export function Comment({content}){
+//Destruturaçao em objetos {}
+export function Comment({content, deleteComment}){
+
+    function handleDeleteComment(){
+        deleteComment(content)
+    }
+
+
     return(
         <div className={Style.comment}>
             <Avatar src='https://github.com/professorguanabara.png' />
@@ -14,7 +21,7 @@ export function Comment({content}){
                             <time title='11 de maio as 00:13h' dateTime='2022-05-11'>Publicado há 1h </time>
                         </div>
 
-                        <button title='Deletar Comentario' >
+                        <button onClick={handleDeleteComment}  title='Deletar Comentario' >
                             Deletar
                         </button>
                     </header>

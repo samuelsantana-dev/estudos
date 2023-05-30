@@ -1,6 +1,6 @@
 import { Header } from './componentes/Header'
 import { Side_bar } from './componentes/Side_bar'
-import { Post } from './componentes/post'
+import { Post } from './componentes/Post'
 
 
 //Estilos
@@ -13,7 +13,7 @@ import './global.css'
 
 const post = [
   {
-      id: 1,
+      id: 0,
 
       author: {
         avatar_url_img: "https://avatars.githubusercontent.com/u/104950258?v=4",
@@ -32,8 +32,7 @@ const post = [
    },
 
    {
-    id: 2,
-
+    id: 1,
     author: {
       avatar_url_img: "https://avatars.githubusercontent.com/u/104950258?v=4https://github.com/professorguanabara.png",
       nome: "Gustavo Guanabara",
@@ -65,6 +64,7 @@ function App() {
               { post.map(posts =>{
                 return (
                   <Post 
+                        key={posts.id}
                         author={posts.author}
                         content={posts.content}
                         publishedAt={posts.publishedAt}

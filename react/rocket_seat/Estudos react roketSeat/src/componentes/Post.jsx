@@ -5,7 +5,7 @@ import { Avatar } from './avatar'
 import { Comment } from './comment'
 import Styles from './post.module.css'
 
-export  function Post({author, publishedAt, content}){
+export  function Post({author,publishedAt ,content}){
 
     const currentDate = new Date();
     //Nova forma de usar o date ver outros exemplos tambem
@@ -42,10 +42,14 @@ export  function Post({author, publishedAt, content}){
         valueCommentText('')
     }
 
+    function deleteComment(comment){
+        const listaSemComentarioApagado = comments.filter(value => {
+            return value != comment
+        })
 
+        setComment(listaSemComentarioApagado)
+    }
 
-
-   
     return(
         <article className={Styles.post}> 
             <header>
@@ -59,21 +63,19 @@ export  function Post({author, publishedAt, content}){
                             <span>{author.profissao}</span>
                     </div>
                 </div>
-
              
                 <time title={publishDateFormat} dateTime={currentDate.toISOString()}>
                      {publishDateFormat}
                  </time>
             </header>
 
-
+            {/**Faz a diferença de OU para diferencia um paragrafo de link */}
             <div className={Styles.content}>
-
                 {content.map(item => {
                     if(item.type == "paragraph"){
-                        return <p>{item.content}</p>
+                        return <p key={item.content}>{item.content}</p>
                     } else if(item.type == 'link'){
-                        return <p><a href='#'>{item.content}</a></p>
+                        return <p key={item.content}><a href='#'>{item.content}</a></p>
                     }
                 })}
     
@@ -82,19 +84,24 @@ export  function Post({author, publishedAt, content}){
             <form onSubmit={enviarComentario} className={Styles.commentForm}> 
                 <strong>Deixe seu feedback</strong>
                 
+                {/**Chama a funçao e guarda o valor para poder fazer as alteraçoes.
+                 * O name="" ele é para ser um localizado(tipo id) do textarea
+                 */}
                 <textarea 
                     name='comment'
                     placeholder='Digite um comentario'
                     value={newCommentText}
                     onChange={handleCreateNewComment}
+                    required
                 />
 
                 <button type='submit' className={Styles.submit}>Enviar</button>
             </form>
 
             <div className={Styles.commentList}>
+                {/*Faz com que seja armazenado e repetido os comentarios */}
                     {comments.map(value=>{
-                        return <Comment content={value} />
+                        return <Comment key={value} content={value} deleteComment={deleteComment} />
                     })}
             </div>
           
@@ -106,17 +113,3 @@ export  function Post({author, publishedAt, content}){
 
 
        
-  /*  Jeito antigfo
-  
-  const publishDateFormat = format(publishedAt, "a 'de' LLLL 'ás' HH:mm'h'", {
-        locale: ptBR, // Utilize o localizador corretamente
-      });
-      
-      const currentDate = new Date();
-
-      
-   const  publishedDataPost = formatDistanceToNow(publishedAt, {
-    locale:ptBR,
-    addSuffix: true
-   }) 
-  */
