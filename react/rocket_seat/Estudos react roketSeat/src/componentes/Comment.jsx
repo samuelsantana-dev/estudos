@@ -6,7 +6,7 @@ import { FaThumbsUp } from 'react-icons/fa';
 
 
 //Destruturaçao em objetos {}
-export function Comment({content, deleteComment}){
+export function Comment({content, deleteComment, publishDateFormat}){
 
     const [valorLikeAtual, novoValorLike] = useState(0)
 
@@ -31,7 +31,7 @@ export function Comment({content, deleteComment}){
                     <header>
                         <div className={Style.authorAndTime}>
                             <strong>Samuel Santana</strong>
-                            <time title='11 de maio as 00:13h' dateTime='2022-05-11'>Publicado há 1h </time>
+                            <time title='11 de maio as 00:13h' dateTime='2022-05-11'>{publishDateFormat} </time>
                         </div>
 
                         <button onClick={handleDeleteComment}  title='Deletar Comentario' >
