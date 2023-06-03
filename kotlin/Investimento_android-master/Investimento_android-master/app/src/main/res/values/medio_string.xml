@@ -1,0 +1,41 @@
+<resources>
+    <string name="tesouro_direto">
+        TESOURO DIRETO /n
+
+Não dá para falar dos melhores investimentos a médio prazo sem citar o Tesouro Direto, uma das opções mais populares entre os investidores brasileiros nos dias de hoje. Eles são extremamente seguros, o que é excelente para perfis mais conservadores e moderados. No entanto, apesar disso, podem apresentar rentabilidades bem interessantes.
+    </string>
+
+    <string name="fundos_de_investimento">
+        Fundos de Investimento: /n
+        Os fundos de investimento podem oferecer opções de investimento diversificadas, como fundos mútuos ou fundos de índice, que podem ser mantidos por um período de tempo médio. Eles são gerenciados por profissionais de investimento e permitem que os investidores acessem uma ampla variedade de ativos financeiros.
+    </string>
+
+    <string name="investimento_açoes">
+        Investimento em Ações:/n
+        Investir em ações pode ser uma opção de médio prazo se você tiver um horizonte de investimento de vários anos. No entanto, investir em ações envolve riscos e volatilidade, então é importante realizar uma análise cuidadosa e diversificar a carteira.
+    </string>
+
+    <string name="letras">
+        LETRAS PARA O MÉDIO PRAZO /n
+
+É bem provável que você já tenha ouvido falar sobre as Letras de Crédito Imobiliário e as Letras de Crédito do Agronegócio. Afinal, são duas das modalidades de investimento mais populares da atualidade por aqui, baseadas em renda fixa e com fatores de proteção importantes, como o aporte do Fundo Garantidor de Crédito.
+    </string>
+
+    <string name="cdb">
+        CDB /n
+
+A sigla CDB é bastante conhecida por quem está familiarizado com o mercado financeiro e quer dizer Certificado de Depósito Bancário. Como o próprio nome já diz, é um produto emitido por bancos e, de forma similar às Letras de Crédito, é utilizado para capitalizar a operação de tais instituições e disponibilizar recursos para investimentos.
+    </string>
+
+
+    <string name="conteudo">
+        Você provavelmente já encontrou as palavras ativo e passivo ao ler sobre fundos de investimento. O fato de essas expressões acompanharem as estratégias da gestão de ativos diz muito sobre os produtos contratados. E saber sobre isso ajuda a entender mais sobre o funcionamento da gestão desses fundos de investimento, bem como os riscos envolvidos.
+    </string>
+
+    <string name="conteudoDois">
+        É importante considerar seus objetivos financeiros, tolerância ao risco e prazo de investimento ao selecionar estratégias de investimento a médio prazo. Além disso, é recomendável buscar orientação de um consultor financeiro ou profissional de investimentos para tomar decisões informadas e adequadas à sua situação financeira.
+    </string>
+
+
+
+</resources>

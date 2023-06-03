@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:textColor="@color/white"
+    android:orientation="vertical"
+    tools:context=".investimentosCurtoPrazo">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/titulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@color/yellow"
+            android:textColor="@color/black"
+            android:text="Investimento Curto Prazo" />
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+
+
+
+            <TextView
+                style="@style/titulos"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:text="@string/investimento_curto_prazo"
+                />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/text" />
+
+            <ImageView
+                android:id="@+id/imagemUm"
+                style="@style/imagem" />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/texto_dois"
+
+                />
+
+            <TextView
+                style="@style/titulos"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:text="@string/recomendaçoes_investimentos"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="@string/explicativo" />
+
+            <TextView
+                style="@style/titulos"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:text="@string/algumas_recomenda_es_incluem" />
+
+            <ImageView
+                android:id="@+id/imagemDois"
+                style="@style/imagem" />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/tesouro_selic" />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/cdb_com_liquidez_di_ria_n_um_investimento_de_renda_fixa_oferecido_por_bancos_e_financeiras_assim_como_o_tesouro_selic_possui_liquidez_di_ria_e_uma_boa_op_o_para_quem_precisa_de_dinheiro_em_curto_prazo" />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="@string/fundos_di_n_s_o_fundos_de_investimento_que_aplicam_em_t_tulos_p_blicos_e_privados_de_baixo_risco_como_cdbs_e_letras_financeiras_possuem_liquidez_di_ria_e_podem_ser_uma_op_o_interessante_para_quem_busca_uma_rentabilidade_um_pouco_maior_do_que_a_do_tesouro_selic" />
+
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="Fundos de renda fixa com prazo de resgate curto: \n\n São fundos que investem em títulos de renda fixa, como CDBs, LCIs e LCAs, e possuem um prazo de resgate mais curto do que a maioria dos fundos de renda fixa. Podem ser uma opção interessante para quem busca um pouco mais de rentabilidade e pode esperar alguns dias para resgatar o dinheiro." />
+
+
+            <TextView
+                style="@style/titulos"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:text="5 Passos para poder Investir"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/imagemTres"
+                style="@style/imagem"/>
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/definir_objetivos_financeiros"
+                 />
+
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/tipo_de_investimento"
+                 />
+
+            <ImageView
+                android:id="@+id/imagemQuatro"
+                style="@style/imagem"
+                />
+
+            <TextView
+                style="@style/textos"
+                android:text="@string/avaliar_risco_liquidez"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/plano_de_investimento"
+                />
+
+            <TextView
+                style="@style/textos"
+                android:layout_margin="20dp"
+                android:text="@string/consulte_um_especialista"
+                />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    style="@style/video" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

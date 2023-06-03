@@ -57,9 +57,9 @@ function App() {
     <div>
       <Header />
       <div className={Style.wrapper}> 
-          <asside> 
+          <aside> 
               <Side_bar />
-          </asside>
+          </aside>
           <main>
               { post.map(posts =>{
                 return (

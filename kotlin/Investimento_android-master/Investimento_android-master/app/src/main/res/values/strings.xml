@@ -1,0 +1,45 @@
+<resources>
+    <string name="clique_aqui">Clique aqui</string>
+    <string name="app_name">Investing Training</string>
+
+    <string name="investimento_curto_prazo">O que sao investimentos a curto prazo?</string>
+
+    <string name="text">Os investimentos de curto prazo são as operações financeiras que duram entre 1 e 90 dias.
+        Geralmente, essas movimentações são marcadas pela alta rentabilidade e liquidez. Esse tipo de aplicação deve estar baseado em estratégia pré-definida, gestão de risco e alinhada ao perfil do investidor. </string>
+    <string name="texto_dois">Quando falamos em investimentos de curto prazo em Renda Fixa, estamos falando sobre as alternativas de aplicações com liquidez diária, oferecidas por muitas instituições financeiras.</string>
+
+    <string name="recomendaçoes_investimentos">Recomendaçoes de Investimentos</string>
+    <string name="explicativo">Ao investir a curto prazo, é importante considerar investimentos que tenham liquidez, ou seja, que possam ser facilmente convertidos em dinheiro quando necessário. </string>
+
+    <string name="tesouro_selic"> Tesouro Selic: \n
+        É um investimento de renda fixa com liquidez diária, o que significa que você pode resgatar seu dinheiro a qualquer momento. É considerado um dos investimentos mais seguros do mercado.</string>
+
+    <string name="onde_devo_investir">Onde Investir ?</string>
+
+    <string name="preciso_para_investir">Para saber como investir: \n  \n
+       1- É preciso ter um bom planejamento financeiro; \n  \n
+       2- Definir perfil e objetivos de curto, médio e longo prazos; \n  \n
+       3- Ter conta ativa em uma corretora de valores; \n  \n
+       4- Conhecer os produtos do mercado financeiro e construir uma boa carteira diversificada de investimentos. \n</string>
+
+    /*definir_objetivos_financeiros*/
+    <string name="definir_objetivos_financeiros">Defina seus objetivos financeiros:\n
+        Antes de começar a investir, é importante ter uma ideia clara do que você deseja alcançar financeiramente a curto prazo. \n
+        Isso pode incluir, por exemplo, uma viagem, a compra de um carro ou a reforma de uma casa.</string>
+
+    <string name="tipo_de_investimento">Escolha o tipo de investimento: \n Existem diferentes tipos de investimentos disponíveis no mercado, cada um com suas próprias características e riscos.
+        \n Para investir a curto prazo, você pode considerar investir em renda fixa, como títulos públicos, CDBs, LCIs, LCAs, entre outros, que são considerados menos arriscados e oferecem uma rentabilidade previsível.</string>
+
+    <string name="avaliar_risco_liquidez">Avalie os riscos e a liquidez:  É importante avaliar os riscos e a liquidez do investimento escolhido, especialmente quando se trata de investimentos a curto prazo. /n
+        \n Os investimentos de renda fixa geralmente são mais seguros e previsíveis, mas a liquidez pode ser limitada. Por outro lado, investimentos de renda variável, como ações, podem oferecer retornos mais altos, mas também são mais arriscados e podem ter flutuações de curto prazo</string>
+
+    <string name="plano_de_investimento">Tenha um plano de investimento: \n É importante ter um plano de investimento definido, incluindo o valor a ser investido, o prazo e o objetivo financeiro a ser alcançado. Mantenha-se atualizado sobre as condições de mercado e faça ajustes em seu plano, se necessário.</string>
+
+    <string name="consulte_um_especialista">Consulte um especialista: \n Se você não tem experiência em investimentos ou não se sente confortável tomando decisões financeiras, considere consultar um especialista, como um consultor financeiro ou um corretor de valores mobiliários, para obter orientação e conselhos personalizados.</string>
+    <string name="cdb_com_liquidez_di_ria_n_um_investimento_de_renda_fixa_oferecido_por_bancos_e_financeiras_assim_como_o_tesouro_selic_possui_liquidez_di_ria_e_uma_boa_op_o_para_quem_precisa_de_dinheiro_em_curto_prazo">CDB com liquidez diária: \n é um investimento de renda fixa oferecido por bancos e financeiras. Assim como o Tesouro Selic, possui liquidez diária e é uma boa opção para quem precisa de dinheiro em curto prazo.</string>
+    <string name="fundos_di_n_s_o_fundos_de_investimento_que_aplicam_em_t_tulos_p_blicos_e_privados_de_baixo_risco_como_cdbs_e_letras_financeiras_possuem_liquidez_di_ria_e_podem_ser_uma_op_o_interessante_para_quem_busca_uma_rentabilidade_um_pouco_maior_do_que_a_do_tesouro_selic">Fundos DI: \n são fundos de investimento que aplicam em títulos públicos e privados de baixo risco, como CDBs e letras financeiras. Possuem liquidez diária e podem ser uma opção interessante para quem busca uma rentabilidade um pouco maior do que a do Tesouro Selic.</string>
+    <string name="algumas_recomenda_es_incluem">Algumas recomendações incluem:</string>
+
+</resources>
+
+

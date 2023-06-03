@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity" >
+
+
+   <TextView
+       style="@style/Botaomenu"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:text="Bem Vindo !!"
+       />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:gravity="center">
+
+  <TextView
+      style="@style/titulos"
+      android:layout_width="215dp"
+      android:layout_height="82dp"
+      android:layout_marginTop="15dp"
+      android:text="O que voce busca investir na bolsa de valores ?"
+     />
+
+  <TextView
+     style="@style/titulos"
+     android:text="Investimento de curto prazo" />
+
+     <TextView
+         android:id="@+id/curtoPrazo"
+         style="@style/botao_inicial"
+         android:text="Curto prazo" />
+
+ <TextView
+     style="@style/titulos"
+     android:text="Investimento de medio Prazo"
+     />
+
+ <TextView
+        style="@style/botao_inicial"
+        android:id="@+id/medioPrazo"
+        android:text="medio Prazo"
+       />
+
+    <TextView
+        style="@style/titulos"
+        android:text="Investimento de Longo Prazo"
+         />
+
+ <TextView
+     style="@style/botao_inicial"
+     android:id="@+id/longoPrazo"
+     android:text="Longo Prazo" />
+
+     <TextView
+         style="@style/titulos"
+         android:text="O que eu preciso pra poder investir ?"
+         android:textSize="20sp"
+         android:textStyle="bold" />
+
+     <TextView
+         style="@style/textos"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="10dp"
+         android:layout_margin="10dp"
+         android:text="@string/preciso_para_investir" />
+
+ </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

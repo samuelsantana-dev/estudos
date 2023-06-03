@@ -1,11 +1,24 @@
+import { useState } from 'react';
 import { Avatar } from './avatar'
 import Style from './comment.module.css'
+import { FaBeer } from 'react-icons/fa';
+import { FaThumbsUp } from 'react-icons/fa';
+
 
 //Destruturaçao em objetos {}
 export function Comment({content, deleteComment}){
 
+    const [valorLikeAtual, novoValorLike] = useState(0)
+
     function handleDeleteComment(){
         deleteComment(content)
+    }
+
+    function Likes(){
+        novoValorLike((state) => {
+            return state + 1
+        })
+       // novoValorLike(valorLikeAtual + 1)
     }
 
 
@@ -22,15 +35,16 @@ export function Comment({content, deleteComment}){
                         </div>
 
                         <button onClick={handleDeleteComment}  title='Deletar Comentario' >
-                            Deletar
+                            <FaBeer />
                         </button>
                     </header>
                     <p>{content}</p>
 
                 </div>
+                
                 <footer>
-                    <button> 
-                        curti <span>20</span>
+                    <button onClick={Likes}> 
+                        <FaThumbsUp /> Aplaudr  <span>{valorLikeAtual}</span>
                     </button>
                 </footer>
             </div>

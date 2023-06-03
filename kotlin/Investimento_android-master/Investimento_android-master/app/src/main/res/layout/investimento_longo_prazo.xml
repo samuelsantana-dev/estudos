@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/black"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout">
+
+        <TextView
+            style="@style/titulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@color/yellow"
+            android:textColor="@color/black"
+            android:text="Investimento Longo Prazo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/introducao"
+                    />
+
+
+                    <TextView
+                        style="@style/textos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/previdencia_privada"
+                        />
+
+                    <TextView
+                        style="@style/textos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/investimento_startups"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imagemLongoUm"
+                        style="@style/imagem" />
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/acoes"
+                    />
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/fundos_mutuos"
+                    />
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/titulos"
+                    />
+
+                    <ImageView
+                        android:id="@+id/imagemLongoDois"
+                        style="@style/imagem"
+                        />
+
+                    <TextView
+                        style="@style/textos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/previdencia_privada"
+                        />
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/imoveis"
+                    />
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/privada"
+                    />
+
+                    <ImageView
+                        style="@style/imagem"
+                        android:id="@+id/imagemLongoTres"
+                        />
+
+                <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/atençao"
+                    />
+
+                    <TextView
+                    style="@style/textos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/titulos_governo"
+                    />
+
+                    <TextView
+                        style="@style/textos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/fundos_mutuos"
+                        />
+
+
+
+                    <VideoView
+                       android:id="@+id/videoLongoPrazo"
+                        style="@style/video"
+                    />
+
+                </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

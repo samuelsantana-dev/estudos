@@ -27,6 +27,7 @@ export  function Post({author,publishedAt ,content}){
 
     //Pega o valor do textArea
     function handleCreateNewComment(){
+        //event.target.setCustomValidty('')
         valueCommentText(event.target.value)
     }
 
@@ -42,6 +43,10 @@ export  function Post({author,publishedAt ,content}){
         valueCommentText('')
     }
 
+    function novoComentarioInvalido(){
+            event.target.setCustomValidty("Tem que preencher este campo para enviar a mensagem")
+    }    
+
     function deleteComment(comment){
         const listaSemComentarioApagado = comments.filter(value => {
             return value != comment
@@ -49,6 +54,9 @@ export  function Post({author,publishedAt ,content}){
 
         setComment(listaSemComentarioApagado)
     }
+
+    //Aqui foi usado o clean Code
+    const enquantoNovoComentarioEstaVazio = newCommentText.length == 0
 
     return(
         <article className={Styles.post}> 
@@ -91,11 +99,14 @@ export  function Post({author,publishedAt ,content}){
                     name='comment'
                     placeholder='Digite um comentario'
                     value={newCommentText}
+                    onInvalid={novoComentarioInvalido}
                     onChange={handleCreateNewComment}
                     required
                 />
 
-                <button type='submit' className={Styles.submit}>Enviar</button>
+                <button type='submit' className={Styles.submit} disabled={enquantoNovoComentarioEstaVazio}>
+                    Enviar
+                </button>
             </form>
 
             <div className={Styles.commentList}>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:textColor="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/white"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout">
+
+        <TextView
+            style="@style/titulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@color/yellow"
+            android:textColor="@color/black"
+            android:text="Investimento Medio Prazo" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/titulos"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:text="Investimentos a medio prazo"
+                    android:textAlignment="center" />
+
+                <TextView
+                    style="@style/textos_medio"
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/tesouro_direto" />
+
+
+                <TextView
+                    style="@style/textos_medio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/investimento_açoes" />
+
+                <ImageView
+                    android:id="@+id/imagemMedioUm"
+                    style="@style/imagem" />
+
+                <TextView
+                    style="@style/textos_medio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/letras" />
+
+                <TextView
+                    style="@style/textos_medio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/cdb" />
+
+
+                <ImageView
+                    android:id="@+id/imagemMedioDois"
+                    style="@style/imagem" />
+
+
+
+                <TextView
+                    style="@style/textos_medio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/fundos_investimentos" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        style="@style/textos_medio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/conteudo" />
+
+                    <ImageView
+                        android:id="@+id/imagemMedioTres"
+                        style="@style/imagem" />
+
+                    <TextView
+                        style="@style/textos_medio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/conteudoDois" />
+
+                </LinearLayout>
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    style="@style/video"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
