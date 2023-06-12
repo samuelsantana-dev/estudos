@@ -7,6 +7,7 @@ import { FaThumbsUp } from 'react-icons/fa';
 interface CommentProps {
     content: string
     deleteComment: (comment: string) => void; 
+    //Void quer dizer vazio
 }
 
 

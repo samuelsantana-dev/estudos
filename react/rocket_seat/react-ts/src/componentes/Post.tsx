@@ -22,7 +22,7 @@ interface PostProps {
     content: Content[];
 }
 
-export  function Post({author, publishedAt ,content}: PostProps){
+export  function Post({author ,content}: PostProps){
 
     const currentDate = new Date();
     //Nova forma de usar o date ver outros exemplos tambem
