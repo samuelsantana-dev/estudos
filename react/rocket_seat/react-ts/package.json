@@ -2,7 +2,7 @@
   "name": "reacjs---ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/Samuel-Santana109/estudos/tree/master/react/rocket_seat/react-ts",
+  "homepage": "https://github.io/Samuel-Santana109/react-ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "date-fns": "^2.30.0",
