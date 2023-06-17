@@ -25,10 +25,12 @@ export const ButtonPai = styled.button<buttonPaiPropriedades>`
     width: 90px;
     height: 90px;
 
-    ${props => {
+    //o theme é o que esta no app.tsx
+    background-color: ${props => props.theme.primary};
+    color: ${props => props.theme.white};
+`
+ /*   ${ => {
         return `background-color: ${buttonCores[props.cores]}`
     }}
-    
-`
-
+    */
 //No caso no video é variante no meu é cores

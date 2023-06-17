@@ -8,7 +8,7 @@ interface buttonPropriedades{
 export function Button( {cores = 'primary'}: buttonPropriedades){
     return(
         <>
-            {/*Aqui esta conectando com o  return `background-color: ${buttonCores[props.cores]}` do outro codigo */}
+            {/*Aqui esta conectando com o export const ButtonPai*/}
             <ButtonPai cores={cores}> Enviar</ButtonPai>
         </>
     )
