@@ -4,21 +4,33 @@ const UseRef = () => {
     //preciso declarar a variavel name, o useState('') dessa forma ele ja começa vazio
     const [name, setName] = useState("")
 
-    const renders = useRef(0)
+    const inputRef = useRef()
+
+    const UseRefFunction = () => {
+        inputRef.current.focus()
+    }
     
-    useEffect(() => {
-        //Ele pega o elemento/valor atual
-        renders.current = renders.current + 1
+    useEffect(() => { 
+        //Ele pega o elemento/valor atual 
+        // inputRef.current basicamente e o valor atual 
+        inputRef.current = inputRef.current + 1
     })
 
     return(
         <div>
             {/*Aqui pego o valor do name e retorno com o setName */}
-            <input  value={name} onChange={(v) => setName(v.target.value)}/>
+            <input 
+            ref={inputRef}
+             value={name}
+             onChange={(value) => setName(value.target.value)}
+             />
+            <button onClick={UseRefFunction}>
+                Focar input
+            </button>
             <p>Seja muito bem vindo! {name}</p>
-            <p>Contagem dos caracteres digitados no input: {renders.current} </p>
         </div>
     )
 }
 
 export default UseRef
+

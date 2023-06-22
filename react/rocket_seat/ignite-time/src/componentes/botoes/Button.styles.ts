@@ -1,15 +1,8 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 //Armazenar o nome das cores
 export type ButtonCores = 'primary' | 'secundary' | 'Danger' | 'sucess'
 
-//Chamou as cores de fato e define elas junto com os nomes acima
-const buttonCores = {
-    primary: 'purple',
-    secundary: 'orange',
-    Danger: 'red',
-    sucess: 'green'
-}
 
 //Guardou as cores e guarda as propriedasdes do botao
 interface buttonPaiPropriedades  {
@@ -24,9 +17,10 @@ export const ButtonPai = styled.button<buttonPaiPropriedades>`
 //Esta definindo os estilos do botao
     width: 90px;
     height: 90px;
+    margin: 1rem;
 
     //o theme é o que esta no app.tsx
-    background-color: ${props => props.theme.primary};
+    background-color: ${props => props.theme['green-500']};
     color: ${props => props.theme.white};
 `
  /*   ${ => {
