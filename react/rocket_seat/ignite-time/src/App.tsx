@@ -16,6 +16,7 @@ function App() {
        </BrowserRouter>
 
         <GlobalStyle theme={defaultTheme}  />
+        <h1>Parei na aula - pagina history</h1>
      </ThemeProvider>
   )
 }
