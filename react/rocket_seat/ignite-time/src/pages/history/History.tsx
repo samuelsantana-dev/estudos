@@ -1,4 +1,4 @@
-import { HistoryContainer,HistoryList } from './style.ts'
+import { HistoryContainer,HistoryList,Status  } from './Style.ts'
 
 export function History(){
     return(
@@ -20,37 +20,37 @@ export function History(){
                             <td>Tarefa</td>
                             <td>20 minutos</td>
                             <td>Há 2 meses</td>
-                            <td>Concluido</td>
+                            <td><Status StatusColor='green'>Concluido</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20 minutos</td>
                             <td>Há 2 meses</td>
-                            <td>Concluido</td>
+                            <td><Status StatusColor='green'>Concluido</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20 minutos</td>
                             <td>Há 2 meses</td>
-                            <td>Concluido</td>
+                            <td><Status StatusColor='green'>Concluido</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20 minutos</td>
                             <td>Há 2 meses</td>
-                            <td>Concluido</td>
+                            <td><Status StatusColor='green'>Concluido</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20 minutos</td>
                             <td>Há 2 meses</td>
-                            <td>Concluido</td>
+                            <td><Status StatusColor='yellow'>Em andamento</Status></td>
                         </tr>
                         <tr>
                             <td>Tarefa</td>
                             <td>20 minutos</td>
                             <td>Há 2 meses</td>
-                            <td>Concluido</td>
+                            <td><Status StatusColor='red'>Interrompido</Status></td>
                         </tr>
                     </tbody>
                 </table>

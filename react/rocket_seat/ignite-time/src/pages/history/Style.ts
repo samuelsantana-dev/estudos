@@ -35,7 +35,7 @@ export const HistoryList = styled.div`
                // font-size: 0.075rem;
 
             &:first-child{
-            border-top-left-radius: 8px;
+            border-top-left-radius: 8px; 
             padding-left: 1.5rem;
              }
 
@@ -64,6 +64,30 @@ export const HistoryList = styled.div`
 
         }
 
-
     }
+`
+const STATUS_COLORS = {
+    yellow: 'yellow-1500',
+    red: 'red-1000',
+    green: 'green-600'
+} as const
+interface StatusProps  {
+    StatusColor: keyof typeof STATUS_COLORS
+}
+
+// As tags <> sevem para mostrar o que vai receber é uma conexao
+export const Status = styled.span<StatusProps>`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    //before sempre aparece antes do conteudo que vai ser colocado
+    &::before{
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: ${(props) => props.theme[STATUS_COLORS[props.StatusColor]]};
+    }
+
 `
