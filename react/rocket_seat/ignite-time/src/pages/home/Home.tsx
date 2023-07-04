@@ -1,17 +1,41 @@
 import { Play } from "phosphor-react";
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as zod from 'zod'
 
 //todos esses nomes se pegam la no style que esta na mesma pasta que esse arquivo
 import { HomeContainer, FormContainer, CouwtdowContainer, Separator, StartButton, TaskInput,Minutes } from './style.ts'
 
+//Aqui estao os meus parametros do formualario 
+const novoFormularioDeValidaçaoCiclo = zod.object({
+    task: zod.string()
+    .min(1, 'informe a tarefa'),
+
+    minutes: zod.number()
+    .min(5, 'Informe um numero maior do que 5 minutos')
+    .max(60, 'Informe um numero menor que 0 minutos')
+})
+
+//Integrando o formulario com o typscript e faz a conversao usando o typeof da variavel javascript pro typscript
+type novoCicloFormData = zod.infer<typeof novoFormularioDeValidaçaoCiclo>
 
 export function Home(){
     //Começando ja com ('') ja reconhece que o valor vai ser string diretamente
-   const {register, handleSubmit, watch} = useForm()
+   const {register, handleSubmit, watch, reset} = useForm<novoCicloFormData>({
+    resolver: zodResolver(novoFormularioDeValidaçaoCiclo),
+    defaultValues: {
+        task: '', 
+        //Sempre tomar cuidado com letras maiuscula e minusculas porque isso faz total diferença e talvez nao conecte por conta disso 
+        minutes: 0
+    }
+   })
 
-   function novoCiclo(data: any){
+   function novoCiclo(data: novoCicloFormData){
+        //Vai limpar todos os dados do formularios 
         console.log(data)
+        reset()
    }    
+
    //Watch quer dizer quer observar
    //Aqui vai ficar o valor do input automaticamente e com a string dentro do watch("task") localiza qual é o input que vai observar 
    const taskValue = watch('task')
