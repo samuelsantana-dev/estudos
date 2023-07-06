@@ -1,0 +1,21 @@
+@use 'variaveis'
+
+//Sao como funçoes elas ja ficam fixas e pode chamar elas quantas vezes quiser e onde quiser
+       
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin btn
+    padding: 1rem 1.2rem
+    color: variaveis.$text-color
+    background: variaveis.$gradient
+    text-decoration: none
+    border-radius: 3rem
+
+@mixin gradient-border
+    content: ""
+    background: variaveis.$gradient
+    height: 3px
+    width: 30%
