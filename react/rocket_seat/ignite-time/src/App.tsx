@@ -16,7 +16,7 @@ function App() {
        </BrowserRouter>
 
         <GlobalStyle theme={defaultTheme}  />
-        <h1>Parei na aula - Iniciando Novo Ciclo</h1>
+        <h1>Parei na aula - O hook useEffect inclusive ja criei a pasta</h1>
      </ThemeProvider>
   )
 }

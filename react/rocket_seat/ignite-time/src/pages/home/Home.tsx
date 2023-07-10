@@ -5,12 +5,12 @@ import * as zod from 'zod'
 
 //todos esses nomes se pegam la no style que esta na mesma pasta que esse arquivo
 import { HomeContainer, FormContainer, CouwtdowContainer, Separator, StartButton, TaskInput,Minutes } from './style.ts'
+import { useEffect, useState } from "react";
 
 //Aqui estao os meus parametros do formualario 
 const novoFormularioDeValidaçaoCiclo = zod.object({
     task: zod.string()
     .min(1, 'informe a tarefa'),
-
     minutes: zod.number()
     .min(5, 'Informe um numero maior do que 5 minutos')
     .max(60, 'Informe um numero menor que 0 minutos')
@@ -19,10 +19,35 @@ const novoFormularioDeValidaçaoCiclo = zod.object({
 //Integrando o formulario com o typscript e faz a conversao usando o typeof da variavel javascript pro typscript
 type novoCicloFormData = zod.infer<typeof novoFormularioDeValidaçaoCiclo>
 
+//Vai guardar os dados em que cada um vai receber
+interface Ciclo {
+    id: string, 
+    task: string,
+    minutes: number
+}
+
 export function Home(){
+
+    //Sempre iniciar suas aplicaçoes com o mesmo valor que vai manusear ao olongo do projeto
+    const [ cicloAtual, setCyclo] = useState<Ciclo[]>([])
+    const [atividadeCicloId, novaAtividadeCicloId] = useState<string | null>(null)
+    
+    const [segundoJaRegistrado, setSegundoJaRegistrado] = useState<number>(0); //useEffect(0)
+
+    const activeCycle = cicloAtual.find((valor) => valor.id == atividadeCicloId)
+    const totalSeconds = activeCycle ? activeCycle.minutes * 60 : 0;
+
+    const currentSeconds = activeCycle ? totalSeconds - segundoJaRegistrado : 0
+
+    const minutesAmount = Math.floor(currentSeconds / 60);
+    const secondAmount = currentSeconds % 60;
+    const minutes = String(minutesAmount).padStart(2, '0');
+    const seconds = String(secondAmount).padStart(2, '0');     
+    
     //Começando ja com ('') ja reconhece que o valor vai ser string diretamente
    const {register, handleSubmit, watch, reset} = useForm<novoCicloFormData>({
     resolver: zodResolver(novoFormularioDeValidaçaoCiclo),
+
     defaultValues: {
         task: '', 
         //Sempre tomar cuidado com letras maiuscula e minusculas porque isso faz total diferença e talvez nao conecte por conta disso 
@@ -31,8 +56,19 @@ export function Home(){
    })
 
    function novoCiclo(data: novoCicloFormData){
+        const id = String(new Date().getTime())
+
+        const newCycle: Ciclo = {
+                id,
+                task: data.task,
+                minutes: data.minutes
+        }
+
+        //Vai coiar o ciclo atual de qualquer um que estiver
+        setCyclo((state) =>  [...state, newCycle])
+        novaAtividadeCicloId(id)
+
         //Vai limpar todos os dados do formularios 
-        console.log(data)
         reset()
    }    
 
@@ -81,11 +117,11 @@ export function Home(){
                 </FormContainer>
 
                 <CouwtdowContainer>
-                    <span>0</span>
-                    <span>0</span>
+                    <span>{minutes[0]}</span>
+                    <span>{minutes[1]}</span>
                     <Separator>:</Separator>
-                    <span>0</span>
-                    <span>0</span>
+                    <span>{seconds[0]}</span>
+                    <span>{seconds[1]}</span>
                 </CouwtdowContainer>
 
                 {/* disabled={!value} | pode ser feito de outras formas tambem | Quando nao tiver nada escrito nao pode enviar mas quando ja tiver algo escriot o botao vai ficar cliacvel  */}
