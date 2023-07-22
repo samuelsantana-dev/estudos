@@ -49,8 +49,6 @@ export const TaskInput = styled(BaseInput)`
     }
 `
 
-
-
 export const FormContainer = styled.div`
     width: 100%;
     display: flex;
@@ -86,7 +84,7 @@ export const Separator = styled.div`
     color: ${(props) => props.theme['green-800']};
 `
 
-export const StartButton = styled.button`
+export const BaseButton = styled.button`
 
     width: 100%;
     border: 0;
@@ -102,16 +100,31 @@ export const StartButton = styled.button`
 
     cursor: pointer;
 
-    background: ${(props) => props.theme['green-600']};
-    color: ${(props) => props.theme['gray-1400']};
-
+ 
     &:disabled{
         opacity: 0.7;
         cursor: not-allowed;
     }
 
+  
+
+`
+
+export const StartButton = styled(BaseButton)`
+    background: ${(props) => props.theme['green-600']};
+    color: ${(props) => props.theme['gray-1400']};
+
     &:not(:disabled):hover{
         background: ${(props) => props.theme['green-800']};
-    }
+     }
 
+`
+
+export const PararCicloAtual = styled(BaseButton)`
+     background: ${(props) => props.theme['red-900']};
+     color: ${(props) => props.theme['white']};
+
+    &:not(:disabled):hover{
+        background: ${(props) => props.theme['red-900']};
+     }
 `

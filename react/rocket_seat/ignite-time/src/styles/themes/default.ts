@@ -19,10 +19,11 @@ export const defaultTheme = {
     'green-700': '#00B37E',
     'green-800': '#009E66',
 
-    'red-900': '#AB2227E',
+    'red-900': '#AB2227',
     'red-1000': '#FFC1C5',
-    'red-1100': '#AB2227E',
+    'red-1100': '#AB2227',
     'red-1200': '#8A1E20',
+
 
     'yellow-1300': '#FBA49C',   
     'yellow-1400': '#FFF2CC',
