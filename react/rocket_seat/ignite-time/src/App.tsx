@@ -16,7 +16,7 @@ function App() {
        </BrowserRouter>
 
         <GlobalStyle theme={defaultTheme}  />
-        <h1>#F233 27.Interromper ciclo - Rocketseat</h1>
+        <h1>#F237 31.Entendendo contextos - Rocketseat</h1>
 
 
      </ThemeProvider>

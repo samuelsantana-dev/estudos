@@ -1,58 +1,67 @@
-import { useContext, useEffect} from "react";
-import { CountdownContainer, Separator } from "./style";
+import { useEffect, useState } from "react";
+import { CouwtdowContainer, Separator } from "./style";
 import { differenceInSeconds } from "date-fns";
-import { CycleContext } from "../../../contexts/CyclesContext";
-   
 
-export function CountDown(){
+interface CountdownProps {
+  activeCycle: any
+}
 
+
+export function Countdown({ activeCycle }: CountdownProps){
+  const [segundoJaRegistrado, setSegundoJaRegistrado] = useState(0); //useEffect(0)
   
-  const { activeCycle, activeCycleId  ,  markCurrentCycleAsFinished, amountSecondPassed,  setSecondsPassed} = useContext(CycleContext);
 
-  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0;
+  function novoCiclo(data: novoCicloFormData){
+    const id = String(new Date().getTime())
+  
+    
 
-  useEffect(() => {
+  useEffect(()=>{
+    let interval: number;
 
-    let interval : number;
-
+    //So quero fazer a reduçao do coutdown se tiuver um ciclo ativo
+    //Vai fazer a reduçao de um ciclo ativo
     if(activeCycle){
-     interval = setInterval(() => {
-      
-      const secondsDifference = differenceInSeconds(new Date(), new Date(activeCycle.startDate));
-        
-      if(secondsDifference >= totalSeconds) {
-        markCurrentCycleAsFinished();
-        
-        setSecondsPassed(totalSeconds);
-        clearInterval(interval);
-      }else {
-        setSecondsPassed(secondsDifference)
-      } 
-      }, 1000)
+       interval = setInterval(() => {
+        const secondsDiference = differenceInSeconds(new Date(), activeCycle.startDate)
+
+        if(secondsDiference >= totalSeconds){
+            setCyclo(state => state.map(value => {
+                //Sempre usar o parametro como organizar e usar como se fosse cada valor do array
+                if(value.id == atividadeCicloId){
+                    return {...value, finalizarData: new Date() }
+                } else {
+                    return value
+                }
+            }))
+            
+            setSegundoJaRegistrado(segundoJaRegistrado)
+            clearInterval(interval)
+        } else {
+            setSegundoJaRegistrado(secondsDiference)
+          }
+        }, 1000)
     }
+
     return () => {
-     clearInterval(interval)
+        //Limpar intervalo
+        clearInterval(interval)
     }
-  }, [activeCycle, totalSeconds, activeCycleId,  markCurrentCycleAsFinished, setSecondsPassed]);
-  
-  const currentSeconds = activeCycle ? totalSeconds - amountSecondPassed : 0
-  
-  const minutesAmount = Math.floor(currentSeconds / 60);
-  const secondAmount = currentSeconds % 60;
-  const minutes = String(minutesAmount).padStart(2, '0');
-  const seconds = String(secondAmount).padStart(2, '0');      
- 
-  useEffect(() => {
-    document.title = `Ignite Timer - ${minutes}:${seconds}`
-  }, [minutes, seconds]);
+
+}, [activeCycle, totalSeconds, cicloAtual])
+
+
+
 
   return(
-    <CountdownContainer>
-    <span>{minutes[0]}</span>
-    <span>{minutes[1]}</span>
-    <Separator>:</Separator>
-    <span>{seconds[0]}</span>
-    <span>{seconds[1]}</span>
-  </CountdownContainer>
+    <CouwtdowContainer>
+        <span>{minutes[0]}</span>
+        <span>{minutes[1]}</span>
+
+        <Separator>:</Separator>
+
+        <span>{seconds[0]}</span>
+        <span>{seconds[1]}</span>
+    </CouwtdowContainer>
   )
 }
