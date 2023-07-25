@@ -16,7 +16,7 @@ function App() {
        </BrowserRouter>
 
         <GlobalStyle theme={defaultTheme}  />
-        <h1>#F237 31.Entendendo contextos - Rocketseat</h1>
+        <h1>#F239 33.Contexto no formulário - Rocketseat</h1>
 
 
      </ThemeProvider>
@@ -25,9 +25,3 @@ function App() {
 
 export default App
 
-/*
- <Button cores="primary" />
-        <Button cores="secundary" />
-        <Button cores="Danger" />
-        <Button cores="sucess" />
-*/

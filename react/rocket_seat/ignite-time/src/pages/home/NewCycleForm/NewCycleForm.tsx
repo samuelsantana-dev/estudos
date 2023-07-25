@@ -1,12 +1,14 @@
 import { FormContainer, Minutes, TaskInput } from "./style";
-
+import { useContext } from "react";
 import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as zod from 'zod'
+import { CyclesContext } from "../Home";
 
+import * as zod from 'zod'
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export function NewCycleForm(){
-
+    const { activeCycle } = useContext(CyclesContext)
+    const { register } = useForm()
 
     //Integrando o formulario com o typscript e faz a conversao usando o typeof da variavel javascript pro typscript
     type novoCicloFormData = zod.infer<typeof novoFormularioDeValidaçaoCiclo>
@@ -19,20 +21,7 @@ export function NewCycleForm(){
         .min(1, 'Informe um numero maior do que 5 minutos')
         .max(60, 'Informe um numero menor que 0 minutos')
     })
-
-    //Começando ja com ('') ja reconhece que o valor vai ser string diretamente
-    const {register, handleSubmit, watch, reset} = useForm<novoCicloFormData>({
-        resolver: zodResolver(novoFormularioDeValidaçaoCiclo),
-
-        defaultValues: {
-            task: '', 
-            //Sempre tomar cuidado com letras maiuscula e minusculas porque isso faz total diferença e talvez nao conecte por conta disso 
-            minutes: 0
-        }
-    })
-
- 
-
+    
     return(
             <FormContainer>
                 <label htmlFor="task">Vou trabalhar em</label>

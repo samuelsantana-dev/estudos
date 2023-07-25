@@ -1,5 +1,5 @@
 import FunctuionUseEffect from './useEffect/useEffect'
-
+import { UseContext } from './useContext/useContext'
 import './App.css'
 
 function App() {
@@ -7,7 +7,8 @@ function App() {
 
   return (
     <div>
-        <FunctuionUseEffect />
+        {/*<FunctuionUseEffect />*/}
+        <UseContext />
     </div>
   )
 }
