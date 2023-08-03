@@ -21,22 +21,17 @@
     "plugins": [
       "react"  // Habilita regras específicas do React por meio do plugin "react".
     ],
-  
     /* Regras personalizadas do ESLint a serem aplicadas ao código.*/
     "rules": {
         // Regra de indentação: exige que o código seja indentado com 2 espaços.
         "indent": [
           "error",  // Define o nível de severidade como "erro" caso a indentação não esteja correta.
-          2  // Define a quantidade de espaços (ou tabulações equivalentes) para a indentação.
+          2 // Define a quantidade de espaços (ou tabulações equivalentes) para a indentação.
+         
         ],
-      
-        // Regra de estilo de quebra de linha: exige o uso do estilo "unix" (LF) para quebras de linha.
-        "linebreak-style": [
-          "error",  // Define o nível de severidade como "erro" caso o estilo de quebra de linha não esteja correto.
-          "unix",   // Define o estilo de quebra de linha "unix" (LF - Line Feed) como o estilo aceito.
-          "windows" // Define o estilo de quebra de linha "windows" (CRLF - Carriage Return + Line Feed) como o estilo aceito no código.
-        ],
-      
+         "linebreak-style": "off"
+          ,
+
         // Regra de estilo de aspas: exige o uso de aspas simples.
         "quotes": [
           "error",  // Define o nível de severidade como "erro" caso o estilo de aspas não esteja correto.
@@ -48,7 +43,14 @@
           "error",  // Define o nível de severidade como "erro" caso um ponto e vírgula esteja faltando.
           "always"  // Exige a presença do ponto e vírgula após cada declaração.
         ]
-      }
-      
+      }  
   }
-  
+
+  /*
+   // Regra de estilo de quebra de linha: exige o uso do estilo "unix" (LF) para quebras de linha.
+   "linebreak-style": [
+    "error",  // Define o nível de severidade como "erro" caso o estilo de quebra de linha não esteja correto.
+    "unix",   // Define o estilo de quebra de linha "unix" (LF - Line Feed) como o estilo aceito.
+    "windows" // Define o estilo de quebra de linha "windows" (CRLF - Carriage Return + Line Feed) como o estilo aceito no código.
+  ],
+*/

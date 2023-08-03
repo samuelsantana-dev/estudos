@@ -1,9 +1,12 @@
 import React from 'react';
+import { Header } from './componentes/Header/Header';
+
+//Mnater os codigos em ordem de um padrao
 
 function App() {
-      return (
+  return (
     <div className="App">
-   
+      <Header />
     </div>
   );
 }
@@ -30,4 +33,3 @@ export default App;
         >
          Video
         </a>*/
-kl
