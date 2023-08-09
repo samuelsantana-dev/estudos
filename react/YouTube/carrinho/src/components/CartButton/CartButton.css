@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
   padding: 5px;
-  border: none; /*Tira todo tipo de borda*/
+  border: none;
   background: none;
   cursor: pointer;
-  position: relative;/* Define a posição do elemento como relativa */
+  position: relative;
   margin-left: 20px;
   color: #333;
 }
@@ -16,7 +16,7 @@
   background-color: red;
   width: 15px;
   height: 15px;
-  position: absolute;/* Define a posição do elemento como absolute */
+  position: absolute;
   top: 0;
   left: 0;
   color: white;

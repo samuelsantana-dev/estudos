@@ -1,6 +1,6 @@
 .header {
   background-color: #fff159;
-  position: fixed; /*Serve para o header ficar fixo*/
+  position: fixed;
   width: 100%;
   z-index: 1;
 }
