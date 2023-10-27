@@ -8,10 +8,10 @@ const automatico = document.getElementById("automatico")
 let img = document.getElementById("img")
 
 const imagensAutomaticas = {
-    'red': () => "../img/vermelho.png",
-    'amarelo': () => "../img/amarelo",
-    'verde': () =>  "../img/vermelho.png",
-}
+    'red': () => img.src = '../img/vermelho.png',
+    'amarelo': () => img.src = '../img/amarelo.png',
+    'verde': () => img.src = '../img/verde.png'
+};
 
 
 //Criar funçoes
@@ -27,12 +27,16 @@ function Verde(){
     img.src = '../img/verde.png'
 }
 
-function Automatico(){
-    setInterval(
-        imagensAutomaticas.red.call(img);
-        imagensAutomaticas.yellow.call(img);
-        imagensAutomaticas.green.call(img);
-    ), 2000
+function Automatico() {
+    setInterval(() => {
+        imagensAutomaticas.red();
+        setTimeout(() => {
+            imagensAutomaticas.amarelo();
+            setTimeout(() => {
+                imagensAutomaticas.verde();
+            }, 2000);
+        }, 2000);
+    }, 2000);
 }
 
 //Criar o addEventListenaer para cada botao

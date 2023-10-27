@@ -1,0 +1,10 @@
+{
+    "nome": "Samuel Santana",
+    "idade": 19,
+    "verdadeiro": true,
+    "esportes_praticados": {
+        "futebol": "2 Vezes na semana",
+        "jiu_jitsu": "2 vezes na semana"
+    },
+    "hobbies": ["Programar", "correr", "Ler"] 
+}
