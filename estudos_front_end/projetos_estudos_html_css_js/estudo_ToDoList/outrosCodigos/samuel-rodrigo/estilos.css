@@ -1,0 +1,17 @@
+
+
+#botaoEditar1{
+	float: right;
+	margin-left: 5%;
+	cursor: pointer;
+	border-radius: 10px;
+}
+#botaojs{
+	background-color: aqua;
+	cursor: pointer;
+	margin-left: 100px;
+	justify-content: space-between;
+	border-radius: 10px;
+	float:right
+	
+}

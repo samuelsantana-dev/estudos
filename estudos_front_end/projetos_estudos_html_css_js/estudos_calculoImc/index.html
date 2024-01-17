@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - imc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- O javascript sempre tem que ficar em baixo-->
+    <header>
+        <img src="./imagens/logo-s1xp.png" alt="imagem-logo">
+        <div class="linkh">
+            <a href="https://www.programasaudefacil.com.br/calculadora-de-imc" target="_blank">Link da pagina oficial</a>
+        </div>
+    </header>
+
+    <main>
+        <secton id="text">
+            <h1 class="h1">Calculadora de IMC (e peso ideal)</h1>
+            <p  class="p">
+                A classificação do índice de massa corporal (IMC), pode ajudar a identificar obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.
+             </p>
+            <p  class="p">
+                Além de saber qual é o seu IMC, essa calculadora também indica qual deve ser o seu peso ideal, e assim melhorar sua qualidade de vida, garantindo o seu bem estar.
+            </p>
+        </secton>
+
+        <section>
+            <h1  class="h1">Calculadora do IMC</h1>
+            <p class="p">
+                Coloque os seus dados na calculadora e calcule o seu IMC: 
+            </p>
+            <br>
+        </section>
+
+        <h1 class="h1">Calculadora - IMC</h1>
+
+        <form class="js" id="form" >
+            <div class="input">
+                <label for="nome">Nome:</label> 
+                <input type="text" id="nome" name="nome" class="input" placeholder="Nome e Sobrenome" >
+            </div>
+
+              <!--altura-->
+            <div class="input">
+
+            <label for="altura">Altura:</label>
+            <input placeholder="Exemplo: 185" type="number" name="altura"  id="altura" class="input" >
+               
+            </div>
+
+            <!--Peso-->
+            <div class="input">
+                <label for="peso"> Peso:</label>
+
+            <input type="number" name="peso"  id="peso" class="input" placeholder="Exemplo: 75" min="1" max="200">
+            </div >
+            
+            <!--O input de reset ja limpa automaticamente-->
+            <div class="input">
+                <input type="submit" class="botao" value="Calcular">
+                <input type="reset" id="limpar" value="Limpar"  class="botao">
+            </div>
+
+            <p class="p" id="res">
+            </p>
+        </form>
+
+    </main>
+    <br>
+    <footer>
+        <h1 class="h1">Como calcular o IMC
+        </h1>
+        <p class="p">
+            O IMC é calculado dividindo o peso (em kg) pela altura ao quadrado (em m), de acordo com a seguinte fórmula: IMC = peso / (altura x altura).
+        O resultado de IMC é dado em kg/m2.
+        </p>
+    </footer>
+    <script src="./scrpits/novoScript.js"></script>
+</body>
+
+</html>
+<!--https://www.tuasaude.com/calculadora/imc/ site do imc do projeto-->

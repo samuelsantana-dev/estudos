@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Menu */
+header {
+    text-align: center;
+    padding: 1em;
+}
+
+/* Links */
+header a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a cor do texto */
+}
+
+header a:hover {
+    background-color: darkgray;
+    color: black;
+    padding: 0.2em;
+    border-radius: 10px;
+}
+
+/* Div geral */
+main {
+    background-color: #f0f0f0; /* Altera para uma cor mais clara */
+    max-width: 80%;
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/* Texto */
+h1 {
+    font-size: 2em; /* Aumenta o tamanho da fonte */
+    text-align: center;
+    margin: 1em 0;
+}
+
+p {
+    text-align: center;
+    margin: 1em 0;
+    color: #555; /* Adiciona uma cor mais escura para o texto */
+}
+
+/* Inputs */
+.input {
+    border-radius: 5px; /* Reduz a borda para uma aparência mais sutil */
+    margin: 1em auto; /* Ajusta a margem para maior consistência */
+    text-align: center;
+    width: 60%;
+    padding: 1em;
+    border: 1px solid #ddd; /* Adiciona uma borda mais sutil */
+}
+
+/* Botão */
+.botao {
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1em auto; /* Ajusta a margem para maior consistência */
+    background-color: #4c4c4c;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.botao:hover {
+    background-color: #3b3b3b;
+}

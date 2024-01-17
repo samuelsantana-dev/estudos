@@ -1,0 +1,13 @@
+{
+  "name": "estudos",
+  "version": "1.0.0",
+  "description": "Estudos sobre gerenciamento de pacotes ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo 'Iniciando o desenvolvimento de produção'",
+    "dev": "echo 'Iniciando o setor de desenvolvimento'"
+  },
+  "author": "Samuel Santana",
+  "license": "ISC"
+}
