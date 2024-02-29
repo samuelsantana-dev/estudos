@@ -1,0 +1,39 @@
+name: release-pipeline
+
+on:
+  push:
+    branches: [ main ]
+ 
+jobs:
+  deploy-server-production:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - name: Access droplet and update code
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          # Exporta envs para ter acesso ao nodejs
+          script: |
+            echo "Access directory"
+            cd /var/www/api-cv-auth
+            
+            echo "Get updates"
+            git fetch
+            git checkout main
+            git pull origin main
+            
+            echo "Install dependencies"
+            yarn install
+            
+            echo "Build package"
+            yarn build
+
+            echo "Start server"
+            yarn start

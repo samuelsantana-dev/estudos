@@ -1,0 +1,810 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"UserDataAuth": {
+				"properties": {
+					"id": {
+						"type": "number",
+						"format": "double"
+					},
+					"nome": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"data_criacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"data_inativacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"data_nascimento": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"data_revisao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"documento": {
+						"type": "number",
+						"format": "double"
+					},
+					"hora_criacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"hora_inativacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"telefone": {
+						"type": "number",
+						"format": "double"
+					},
+					"sexo": {
+						"type": "string"
+					},
+					"atualizar_dados": {
+						"type": "string"
+					},
+					"email_antigo": {
+						"type": "string"
+					},
+					"email_revisao": {
+						"type": "string"
+					},
+					"foto": {
+						"type": "string"
+					},
+					"profissao_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"cep": {
+						"type": "number",
+						"format": "double"
+					},
+					"localidade_uf": {
+						"type": "string"
+					},
+					"logradouro": {
+						"type": "string"
+					},
+					"bairro_distrito": {
+						"type": "string"
+					},
+					"complemento": {
+						"type": "string"
+					},
+					"evento_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"origem": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"nome",
+					"email",
+					"data_criacao",
+					"data_inativacao",
+					"data_nascimento",
+					"data_revisao",
+					"documento",
+					"hora_criacao",
+					"hora_inativacao",
+					"telefone",
+					"sexo",
+					"atualizar_dados",
+					"email_antigo",
+					"email_revisao",
+					"foto",
+					"profissao_id",
+					"cep",
+					"localidade_uf",
+					"logradouro",
+					"bairro_distrito",
+					"complemento",
+					"evento_id",
+					"origem"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ResponseLogin": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"properties": {
+							"user": {
+								"$ref": "#/components/schemas/UserDataAuth"
+							},
+							"refresh_token": {
+								"type": "string"
+							},
+							"token": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"user",
+							"refresh_token",
+							"token"
+						],
+						"type": "object",
+						"nullable": true
+					}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"BodyLoginType": {
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"email",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ResponseRefreshToken": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"properties": {
+							"token": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"token"
+						],
+						"type": "object",
+						"nullable": true
+					}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"MessageResponse": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"properties": {
+							"message": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"message"
+						],
+						"type": "object",
+						"nullable": true
+					}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ContentPasswordType": {
+				"properties": {
+					"token": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"token",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UserData": {
+				"properties": {
+					"id": {
+						"type": "number",
+						"format": "double"
+					},
+					"nome": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"data_criacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"data_inativacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"data_nascimento": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"data_revisao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"documento": {
+						"type": "number",
+						"format": "double"
+					},
+					"hora_criacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"hora_inativacao": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"telefone": {
+						"type": "number",
+						"format": "double"
+					},
+					"sexo": {
+						"type": "string"
+					},
+					"atualizar_dados": {
+						"type": "string"
+					},
+					"email_antigo": {
+						"type": "string"
+					},
+					"email_revisao": {
+						"type": "string"
+					},
+					"foto": {
+						"type": "string"
+					},
+					"profissao_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"cep": {
+						"type": "number",
+						"format": "double"
+					},
+					"localidade_uf": {
+						"type": "string"
+					},
+					"logradouro": {
+						"type": "string"
+					},
+					"bairro_distrito": {
+						"type": "string"
+					},
+					"complemento": {
+						"type": "string"
+					},
+					"evento_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"origem": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"nome",
+					"email",
+					"data_criacao",
+					"data_inativacao",
+					"data_nascimento",
+					"data_revisao",
+					"documento",
+					"hora_criacao",
+					"hora_inativacao",
+					"telefone",
+					"sexo",
+					"atualizar_dados",
+					"email_antigo",
+					"email_revisao",
+					"foto",
+					"profissao_id",
+					"cep",
+					"localidade_uf",
+					"logradouro",
+					"bairro_distrito",
+					"complemento",
+					"evento_id",
+					"origem"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UserDataResponse": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"allOf": [
+							{
+								"$ref": "#/components/schemas/UserData"
+							}
+						],
+						"nullable": true
+					}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SetUserData": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {
+						"properties": {
+							"user": {
+								"$ref": "#/components/schemas/UserData"
+							},
+							"message": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"user",
+							"message"
+						],
+						"type": "object",
+						"nullable": true
+					}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SetUserDataTypes": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"id": {
+						"type": "number",
+						"format": "double"
+					},
+					"email": {
+						"type": "string"
+					},
+					"nome": {
+						"type": "string"
+					},
+					"sexo": {
+						"type": "string"
+					},
+					"data_nascimento": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"profissao_id": {
+						"type": "number",
+						"format": "double"
+					},
+					"cep": {
+						"type": "number",
+						"format": "double"
+					},
+					"localidade_uf": {
+						"type": "string"
+					},
+					"bairro_distrito": {
+						"type": "string"
+					},
+					"logradouro": {
+						"type": "string"
+					},
+					"complemento": {
+						"type": "string"
+					},
+					"documento": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetProfileTypeResponse": {
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"error": {
+						"type": "string",
+						"nullable": true
+					},
+					"codeHttp": {
+						"type": "number",
+						"format": "double"
+					},
+					"data": {}
+				},
+				"required": [
+					"status",
+					"error",
+					"codeHttp",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "api-cv-authentication",
+		"version": "1.0.0",
+		"description": "cv authentication module",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "Pipetech"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/auth-user/sign": {
+			"post": {
+				"operationId": "Sign",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ResponseLogin"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Auth"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/BodyLoginType"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/auth-user/token/refresh": {
+			"post": {
+				"operationId": "RefreshToken",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ResponseRefreshToken"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Auth"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "token",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/auth-user/password/reset": {
+			"post": {
+				"operationId": "ResetPassword",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/MessageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Auth"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/auth-user/password/reset/validate": {
+			"post": {
+				"operationId": "ValidationTokenToResetPassword",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/MessageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Auth"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "header",
+						"name": "token",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/auth-user/password": {
+			"post": {
+				"operationId": "SetPassword",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/MessageResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Auth"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ContentPasswordType"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user-cv/{id}": {
+			"get": {
+				"operationId": "GetUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/UserDataResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/user-cv": {
+			"put": {
+				"operationId": "SetUser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SetUserData"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SetUserDataTypes"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user-cv/profile/group": {
+			"get": {
+				"operationId": "GetProfile",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/GetProfileTypeResponse"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
