@@ -1,0 +1,20 @@
+{
+  "name": "arquitetura-back-end",
+  "version": "1.0.0",
+  "description": "Estudo de arquitetura back-end",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "samuel santana",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2"
+  }
+}
