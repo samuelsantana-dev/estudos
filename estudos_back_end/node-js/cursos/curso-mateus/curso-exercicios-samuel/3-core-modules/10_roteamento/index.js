@@ -2,6 +2,8 @@
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
+const path = require('path');
+
 
 // Definindo a porta do servidor
 const port = 3000;
@@ -12,7 +14,6 @@ const server = http.createServer((req, res) => {
   var q = url.parse(req.url, true);
  // Analisando a URL da requisição e removendo a barra inicial do caminho do arquivo
  var filename = q.pathname.substring(1);
-
 
   // Exibindo o nome do arquivo no console
   console.log(filename);
