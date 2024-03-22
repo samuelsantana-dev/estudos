@@ -1,0 +1,98 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  background-color: #007bff;
+  padding: 10px 0;
+}
+
+#navbar ul {
+  list-style: none;
+  text-align: center;
+}
+
+#navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#navbar ul li:last-child {
+  margin-right: 0;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+  color: #cceeff;
+}
+
+/* Book Page */
+#book-page {
+  padding: 2em;
+}
+
+/* Voltar Link */
+#book-page a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+#book-page a:hover {
+  color: #0056b3;
+}
+
+/* Container */
+#book-page .container {
+  text-align: center;
+}
+
+/* Título */
+#book-page h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+#book-page p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Ações */
+#book-page .actions {
+  display: flex;
+  justify-content: center;
+}
+
+#book-page .actions a, 
+#book-page .actions input[type="submit"] {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#book-page .actions a:hover, 
+#book-page .actions input[type="submit"]:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js + MySQL</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Estilos do Container de Livros */
+    .books-container {
+      width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .books-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .books-container div {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .books-container div .bold {
+      font-weight: bold;
+    }
+
+    .books-container div a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .books-container div a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="books-container">
+      <h1>Livros disponíveis:</h1>
+    {{#each books}}
+      <div>
+        <h3> #{{this.id}} Titulo </h3>
+        <span class="bold">
+          <a href="/books/{{this.id}}">{{this.title}}</a>
+        </span>
+        <h3>Contem {{this.pageqty}} paginas </h3> 
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>

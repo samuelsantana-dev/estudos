@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js + MySQL</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Estilos do Formulário de Edição de Livro */
+    .form {
+      width: 400px;
+      margin: 0 auto;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .form-control label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-control input[type="text"],
+    .form-control input[type="number"] {
+      width: calc(100% - 12px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-control input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-control input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .form-control input[type="submit"] {
+      width: calc(100% - 32px);
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .form-control input[type="submit"]::after {
+      content: '\1F4DD'; /* Emoji */
+      font-size: 20px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .form-control input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+     .inputSubmit {
+      width: calc(100% - 32px);
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .inputSubmit::after {
+      content: '\1F4DD';
+      font-size: 20px;
+      position: absolute;
+      right: 10px;
+      top: 50%; 
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+  
+  <form class="form" action="/books/updatebook" method="POST">
+  <h1>Edite seu livro:</h1>
+    <input type="hidden" name="id" value="{{book.id}}">
+    <div class="form-control">
+      <label for="title">Título:</label>
+      <input type="text" name="title" placeholder="Título do livro" value="{{book.title}}">
+    </div>
+    <div class="form-control">
+      <label for="pageqty">Número de páginas:</label>
+      <input type="number" name="pageqty" placeholder="Quantas páginas o livro tem?" value="{{book.pageqty}}">
+    </div>
+    <input type="submit" value="Editar" class="inputSubmit">
+  </form>
+</body>
+</html>
