@@ -50,7 +50,7 @@ app.get('/books', function (req, res) {
 
     res.render('books', { books })
   })
-})
+}) 
 
 app.get('/books/:id', function (req, res) {
   const id = req.params.id
