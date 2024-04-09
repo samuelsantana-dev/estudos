@@ -32,6 +32,7 @@ app.post('/users/delete/:id', async (req, res) => {
   res.redirect('/')
 })
 
+
 app.post('/users/create', async (req, res) => {
     const name = req.body.name
     const occupation = req.body.occupation
